@@ -16,7 +16,7 @@ class BotMessagesController {
             const telegramID = message.callback_query.from.id;
             const callbackData = message.callback_query.data;
             const callbackAction = JSON.parse('' + callbackData);
-            console.log('process message:', callbackAction);
+            console.log('process messages:', callbackAction);
             if (callbackAction['callback'] == "categoris") {
                 this.botCtl.sendMessageWithMessageButton(chatID, "ውይ እስቲ እደገና ይሞክሩ", [
                     { 'title': "የፍቅር መልዕክቶች", "callback": { "callback": "one" } },
